@@ -1,0 +1,47 @@
+package Loja;
+
+public class Produto {
+    private String codigo;
+    private String nome;
+    private double preco;
+    private int qntestoque;
+
+    public Produto(String codigo, String nome, double preco, int qntestoque) {
+        this.codigo = codigo;
+        this.nome = nome;
+        this.preco = preco;
+        this.qntestoque = qntestoque;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    public int getQntestoque() {
+        return qntestoque;
+    }
+
+    public void setQntestoque(int qntestoque) {
+        this.qntestoque = qntestoque;
+    }
+}
