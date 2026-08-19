@@ -44,4 +44,14 @@ public class Produto {
     public void setQntestoque(int qntestoque) {
         this.qntestoque = qntestoque;
     }
+
+    @Override
+    public String toString() {
+        return "Produto{" + super.toString() +
+                "codigo='" + codigo + '\'' +
+                ", nome='" + nome + '\'' +
+                ", preco=" + preco +
+                ", qntestoque=" + qntestoque +
+                '}';
+    }
 }

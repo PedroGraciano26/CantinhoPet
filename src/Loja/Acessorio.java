@@ -1,6 +1,6 @@
 package Loja;
 
-public class Acessorio extends Produto{
+public class Acessorio extends Produto implements Promocionavel{
     private String material;
     private Enum categoria;
 
@@ -33,5 +33,11 @@ public class Acessorio extends Produto{
                 "material='" + material + '\'' +
                 ", categoria=" + categoria +
                 '}';
+    }
+
+    @Override
+    public double aplicarPromocao(double valorDesconto) {
+        double precoComDesconto = getPreco() * (100-valorDesconto)/100;
+        return valorDesconto;
     }
 }
