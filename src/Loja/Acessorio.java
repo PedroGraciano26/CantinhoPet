@@ -1,6 +1,6 @@
 package Loja;
 
-public class Acessorio extends Produto{
+public class Acessorio extends Produto implements Promocionavel{
     private String material;
     private Enum categoria;
 
@@ -11,7 +11,7 @@ public class Acessorio extends Produto{
     }
 
     public String getMaterial() {
-        return material;
+        return this.material;
     }
 
     public void setMaterial(String material) {
@@ -19,19 +19,22 @@ public class Acessorio extends Produto{
     }
 
     public Enum getCategoria() {
-        return categoria;
+        return this.categoria;
     }
 
     public void setCategoria(Enum categoria) {
         this.categoria = categoria;
     }
 
-    @Override
     public String toString() {
-        return super.toString() +
-                "Acessorio{" +
-                "material='" + material + '\'' +
-                ", categoria=" + categoria +
-                '}';
+        String var10000 = super.toString();
+        return var10000 + "Acessorio{material='" + this.material + "', categoria=" + String.valueOf(this.categoria) + "}";
+    }
+
+
+    @Override
+    public double aplicarPromocao(double valorDesconto) {
+        double precoComDesconto = getPreco() + (100-valorDesconto)/100);
+        return valorDesconto;
     }
 }

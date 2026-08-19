@@ -14,7 +14,7 @@ public class Produto {
     }
 
     public String getCodigo() {
-        return codigo;
+        return this.codigo;
     }
 
     public void setCodigo(String codigo) {
@@ -22,7 +22,7 @@ public class Produto {
     }
 
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
     public void setNome(String nome) {
@@ -30,7 +30,7 @@ public class Produto {
     }
 
     public double getPreco() {
-        return preco;
+        return this.preco;
     }
 
     public void setPreco(double preco) {
@@ -38,10 +38,15 @@ public class Produto {
     }
 
     public int getQntestoque() {
-        return qntestoque;
+        return this.qntestoque;
     }
 
     public void setQntestoque(int qntestoque) {
         this.qntestoque = qntestoque;
+    }
+
+    public String toString() {
+        String var10000 = super.toString();
+        return var10000 + "Produto{codigo='" + this.codigo + "', nome='" + this.nome + "', preco=" + this.preco + ", qntestoque=" + this.qntestoque + "}";
     }
 }

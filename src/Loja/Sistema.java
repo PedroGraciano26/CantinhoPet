@@ -1,5 +1,6 @@
 package Loja;
 
+import java.lang.classfile.Attributes;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -104,18 +105,84 @@ public class Sistema {
         return null;
     }
 
-    public void atualizarPreco(Scanner scanner){
+    public void atualizarInfo(Scanner scanner){
+
         Produto produto = buscar(scanner);
 
         if(produto == null){
             System.out.println("Impossível Atualizar");
             return;
         }else{
-            System.out.println("Informe o novo preço:");
-            double novoPreco = scanner.nextDouble();
+            System.out.println("Qual informação você quer atualizar?");
+            System.out.println("1 - Nome \n2 - Preço \n3-Estoque");
+            int opcao = scanner.nextInt();
             scanner.nextLine();
-            produto.setPreco(novoPreco);
-            System.out.println("Produto atualizado!");
-            System.out.println(produto);
+
+            if(opcao == 1){
+                System.out.println("Digite o novo nome: ");
+                String novoNome = scanner.nextLine();
+
+                produto.setNome(novoNome);
+                System.out.println("Produto atualizado: " + produto);
+            }else if(opcao == 2){
+                atualizarPreco(produto, scanner);
+            } else if (opcao == 3) {
+                System.out.println("Digite a quantidade para aumentar ou diminuir?");
+                int quantidade = scanner.nextInt();
+                produto.setQntestoque(produto.getQntestoque() + quantidade);
+                System.out.println("Produto atualizado: " + produto);
+            }
+
+
         }
     }
+
+    public void atualizarPreco(Produto produto, Scanner scanner){
+        System.out.println("Informe o novo preço:");
+        double novoPreco = scanner.nextDouble();
+        scanner.nextLine();
+        produto.setPreco(novoPreco);
+        System.out.println("Produto atualizado: " + produto);
+        System.out.println(produto);
+
+    }
+
+    public void removerProduto(Scanner scanner){
+        Produto produto = buscar(scanner);
+
+        if(produto == null){
+            System.out.println("Impossível Atualizar");
+            return;
+        }else{
+            produtos.remove(produto.getCodigo());
+            System.out.println("Produto Removido com sucesso!");
+        }
+    }
+
+    public void buscarProdutosNome(Scanner scanner){
+        System.out.println("Nome do produto:");
+        String nome = scanner.nextLine();
+
+        boolean encontrado = false;
+
+        for (Map.Entry<String, Produto> item : produtos.entrySet()) {
+            if(item.getValue().getNome().equalsIgnoreCase(nome)) {
+                System.out.println(item.getValue());
+                encontrado = true;
+            }
+        }
+
+        if(!encontrado) {
+            System.out.println("Produto não encontrado!");
+        }
+    }
+
+    public void aplicarDesconto(){
+        for(Map.Entry<String, Produto> item : produtos.entrySet()){
+            if(item.getValue() instanceof Promocionavel){
+                ((Promocionavel) item.getValue()).aplicarPromocao(10);
+            }
+        }
+
+    }
+}

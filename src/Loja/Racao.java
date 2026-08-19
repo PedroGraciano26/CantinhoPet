@@ -1,6 +1,6 @@
 package Loja;
 
-public class Racao extends Produto{
+public class Racao extends Produto {
     private String validade;
     private String sabor;
 
@@ -11,7 +11,7 @@ public class Racao extends Produto{
     }
 
     public String getValidade() {
-        return validade;
+        return this.validade;
     }
 
     public void setValidade(String validade) {
@@ -19,19 +19,15 @@ public class Racao extends Produto{
     }
 
     public String getSabor() {
-        return sabor;
+        return this.sabor;
     }
 
     public void setSabor(String sabor) {
         this.sabor = sabor;
     }
 
-    @Override
     public String toString() {
-        return super.toString()+
-                "Racao{" +
-                "validade='" + validade + '\'' +
-                ", sabor='" + sabor + '\'' +
-                '}';
+        String var10000 = super.toString();
+        return var10000 + "Racao{validade='" + this.validade + "', sabor='" + this.sabor + "'}";
     }
 }

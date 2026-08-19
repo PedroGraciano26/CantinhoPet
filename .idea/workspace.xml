@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="547fa45a-71e4-434d-8061-f0d2f2cdbea3" name="Changes" comment="" />
+    <list default="true" id="547fa45a-71e4-434d-8061-f0d2f2cdbea3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Loja/Promocionavel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Loja/Acessorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Loja/Acessorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Loja/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Loja/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Loja/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Loja/Produto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Loja/Racao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Loja/Racao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Loja/Sistema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Loja/Sistema.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,11 +20,14 @@
       <list>
         <option value="Class" />
         <option value="Enum" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_COMMON_BRANCH" value="pedro" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8,
@@ -30,6 +41,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Application.Menu.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
