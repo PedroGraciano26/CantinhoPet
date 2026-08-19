@@ -34,7 +34,7 @@ public class Acessorio extends Produto implements Promocionavel{
 
     @Override
     public double aplicarPromocao(double valorDesconto) {
-        double precoComDesconto = getPreco() + (100-valorDesconto)/100);
+        double precoComDesconto = getPreco() + (100-valorDesconto)/100;
         return valorDesconto;
     }
 }
